@@ -25,5 +25,7 @@ export class ArtistDetailComponent implements OnInit {
   goBack(){
 	  this.locate.back();
   }
+  datafromFilter(){
+  }
 
 }
