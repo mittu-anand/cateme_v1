@@ -1,0 +1,32 @@
+
+<div class="container">
+<div class="col-sm-12 m-t-50">
+<div class="row">
+<div class="col-sm-3">
+<app-filterbar (searchData)="datafromFilter($event)"></app-filterbar>
+</div>
+<div class="col-sm-9">
+<div class="row">
+<div class="col-sm-3 user-block-body m-b-20" *ngFor="let artist of artists">
+  <div class="card">
+    <img src="assets/images/actors/{{artist.picture}}" class="card-img-top img-wrap" alt="...">
+    <div class="card-body">
+      <a class="card-title" routerLink="/actor/{{artist.id}}">{{artist.name}}</a>
+      <p class="card-text">Age - {{artist.age}}</p>
+    </div>
+    <div class="card-footer">
+	<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-xs btn-success"><small><i class="fa fa-facebook-f"></i></small></button>
+  <button type="button" class="btn btn-xs btn-warning"><small><i class="fa fa-twitter"></i></small></button>
+  <button type="button" class="btn btn-xs btn-success"><small><i class="fa fa-wikipedia-w"></i></small></button>
+</div>
+      
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+

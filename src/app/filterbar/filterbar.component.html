@@ -1,0 +1,57 @@
+
+<p class="search-filter-header">Search Filters</p>
+
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         Category
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+		<div class="form-group form-check" *ngFor="let category of filterData.category">
+			<input type="checkbox" class="form-check-input" [(ngModel)]="category.val" (click)="selectedData()" id="{{category.key}}filter">
+			<label class="form-check-label" for="{{category.key}}filter">{{category.name}}</label>
+		</div>
+	 </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Age Group
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="form-group form-check" *ngFor="let age of filterData.age">
+			<input type="checkbox" class="form-check-input" [(ngModel)]="age.val" (click)="selectedData()" id="{{age.key}}filter">
+			<label class="form-check-label" for="age1filter">{{age.name}}</label>
+		</div>
+	  </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Experience
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="form-group form-check" *ngFor="let exp of filterData.experience">
+			<input type="checkbox" class="form-check-input" [(ngModel)]="exp.val" (click)="selectedData()" id="{{exp.key}}filter">
+			<label class="form-check-label" for="exp1filter">{{exp.name}}</label>
+		</div>
+	 </div>
+    </div>
+  </div>
+</div>

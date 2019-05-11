@@ -1,0 +1,16 @@
+.bd-navbar{
+    min-height: 4rem;
+    background-color: #563d7c;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+}
+.cust-nav-ul{
+	    font-size: 12px;
+		
+}
+.cust-nav-ul li a{
+	color: #d4cece;
+}
+.nav-logo{
+	    color: #ffffff;
+		font-weight:bold;
+}

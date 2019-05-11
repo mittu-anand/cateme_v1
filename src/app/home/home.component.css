@@ -1,0 +1,19 @@
+.img-wrap{
+	width:100%;
+	border:1px solid #f5f5f5;
+	float:left;
+}
+.actor-block{
+	margin: 50px;
+    border: 1px solid #e2e2e2;
+    padding: 5px;
+	background:#fbfbfb;
+	/*font-family: 'Cairo', sans-serif !important;*/
+	font-family: 'Gloria Hallelujah', cursive;
+}
+.user-block-body{
+	font-family: 'Cairo', sans-serif;
+}
+.m-t-50{
+	margin-top:50px;
+}
