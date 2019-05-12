@@ -1,0 +1,18 @@
+node {
+
+	stage('Check out from SCM'){
+	 git branch: 'master',url:'https://github.com/mittu-anand/cateme_v1.git'	
+	}
+
+	stage('Install node modules){
+	sh "npm install"
+	}
+	stage ('Build application'){
+	sh "ng build --prod"
+	}
+
+	stage('Deplpy'){
+	scp -r dist root@165.22.247.63:/var/deployfolder/dist/
+	}
+}
+
